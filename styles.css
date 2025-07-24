@@ -1,0 +1,159 @@
+/* Общие стили */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: #121212;
+   color: #e0e0e0;
+   line-height: 1.6;
+}
+
+/* Секция формы */
+.contact-section {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(135deg, #1c2526, #2a1b3d);
+   padding: 20px;
+}
+
+.container {
+   max-width: 600px;
+   width: 100%;
+   background: #1e1e1e;
+   border-radius: 15px;
+   padding: 40px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+   margin: 20px;
+}
+
+.section-title {
+   font-size: 2.5rem;
+   font-weight: 600;
+   text-align: center;
+   color: #ffffff;
+   margin-bottom: 10px;
+}
+
+.section-subtitle {
+   font-size: 1.1rem;
+   text-align: center;
+   color: #b0b0b0;
+   margin-bottom: 30px;
+}
+
+/* Стили формы */
+.contact-form {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+}
+
+.form-group label {
+   font-size: 1rem;
+   font-weight: 600;
+   color: #ffffff;
+   margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+   width: 100%;
+   padding: 12px;
+   font-size: 1rem;
+   border: 2px solid #3a3a3a;
+   border-radius: 8px;
+   background-color: #252525;
+   color: #e0e0e0;
+   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+   outline: none;
+   border-color: #4b0082;
+   box-shadow: 0 0 8px rgba(75, 0, 130, 0.4);
+}
+
+.form-group textarea {
+   min-height: 120px;
+   resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+   color: #888;
+   font-size: 1rem;
+}
+
+.submit-btn {
+   background: linear-gradient(90deg, #2a1b3d, #4b0082);
+   color: #ffffff;
+   font-size: 1.1rem;
+   font-weight: 600;
+   padding: 15px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.submit-btn:active {
+   transform: translateY(0);
+   background: linear-gradient(90deg, #1c2526, #3a0066);
+}
+
+/* Стили сообщений об успехе и ошибке */
+.success,
+.error {
+   text-align: center;
+   font-size: 1rem;
+   margin-top: 20px;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.success {
+   background-color: #1a3c34;
+   color: #2ecc71;
+}
+
+.error {
+   background-color: #4a1b1b;
+   color: #e74c3c;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+   .container {
+      padding: 20px;
+   }
+
+   .section-title {
+      font-size: 2rem;
+   }
+
+   .section-subtitle {
+      font-size: 1rem;
+   }
+
+   .submit-btn {
+      font-size: 1rem;
+      padding: 12px;
+   }
+}
